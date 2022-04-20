@@ -74,4 +74,5 @@ Be ethically naughty.
 ## Maintenance
 I recommend you fork this project so that you can then store your custom **config.py** file in github. You may want to periodically check config.py.example to make sure any changes made to the list of packages to download get replicated to your config.py. 
 
+# How it should look
 ![screenshot](screenshot.png)
