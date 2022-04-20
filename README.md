@@ -22,11 +22,11 @@ Saving to: ‘client.sh’
 ```
 That command will proceed to run **client.sh** and download a bunch of tools into the "bin" directory. What tools? Tools like this:
 
-> linpeas.sh
-> pspy32
-> pspy64
-> LinEnum.sh
-> linuxprivchecker.py
+* linpeas.sh
+* pspy32
+* pspy64
+* LinEnum.sh
+* linuxprivchecker.py
 
 along with several others and any others you want to add.
 
@@ -67,11 +67,11 @@ cp config.py.example config.py
 ```
 *config.py* contains your configuration settings and won't be overwritten if you update your copy of **PWNServer**. You should look it over to make sure it is acceptable to you. Especially the 1st few options:
 
-> USERNAME
-> APPNAME
-> WEBSERVERPORT
-> LPORT
-> SERVERPATH
+* USERNAME
+* APPNAME
+* WEBSERVERPORT
+* LPORT
+* SERVERPATH
 
 However, everything should work out of the box.
 
