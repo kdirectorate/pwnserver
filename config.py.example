@@ -1,7 +1,7 @@
 import os
 
 USERNAME = os.popen("whoami").read()[:-1]
-APPNAME = "Eb13l-Webserver"
+APPNAME = "PWNServer"
 WEBSERVERPORT = 80
 LPORT = 9000
 SERVERPATH = f"/tmp/{APPNAME}"
