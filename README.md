@@ -1,5 +1,4 @@
 # PWNServer
-
 This is an idea I got from [IPPSEC](https://ippsec.rocks) which was to spin up a webserver with some useful tools at the beginning of CTF or job even because you know you'll probably need one. This one kind of got of hand, or maybe its just super useful, either way it does provide tools that I find handy in most jobs.
 
 Currently **PWNServer** is focused on Linux targets. I will add Windows stuff at a later date.
@@ -74,3 +73,5 @@ Be ethically naughty.
 
 ## Maintenance
 I recommend you fork this project so that you can then store your custom **config.py** file in github. You may want to periodically check config.py.example to make sure any changes made to the list of packages to download get replicated to your config.py. 
+
+![screenshot](screenshot.png)

