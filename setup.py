@@ -99,7 +99,7 @@ if __name__ == "__main__":
     print(f"{DESTDIR}/{SSHKEYFILE}.pub")
     print("\n")
     
-    PwnServeDirectoryWithHTTP(port=WEBSERVERPORT,directory=f"{SERVERPATH}/html")
+    PwnServeDirectoryWithHTTP(port=int(args.p),directory=f"{SERVERPATH}/html")
     while True:
         if getLastURI() == "/QUIT":
             break
