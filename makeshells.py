@@ -1,7 +1,7 @@
 #!/bin/env python3 
 
+import os
 import argparse
-from distutils.dir_util import mkpath
 from apputil import *
 from config import *
 
@@ -9,7 +9,7 @@ SCRIPTSDIR = "shells.src"
 
 def main(outputdir,ip,port=9000):
     with log.progress("Make shells") as p:
-        mkpath(outputdir)
+        os.makedirs(outputdir, exist_ok=True)
         port = str(port)
         scripts = os.listdir("{}/".format(SCRIPTSDIR))
         for script in scripts:

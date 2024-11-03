@@ -1,9 +1,10 @@
 #!/bin/env python3 
 
+import os
 import argparse
 from pathlib import Path
 from apputil import *
-from distutils.dir_util import remove_tree, mkpath, copy_tree
+from shutil import rmtree, copytree
 from linuxprivesctools import main as linprevesc
 from makeshells import main as makeshells
 
@@ -65,13 +66,11 @@ if __name__ == "__main__":
 
     if args.w is None:
         try:
-            # Documentation says it will do this without reporting
-            # errors, but the documentation lies.
-            remove_tree(f"{SERVERPATH}")
+            rmtree(f"{SERVERPATH}")
         except:
             pass
-        mkpath(f"{DESTDIR}/{BINPATH}")
-        copy_tree(BASEPATH,f"{DESTDIR}")
+        os.makedirs(f"{DESTDIR}/{BINPATH}", exist_ok=True)
+        copytree(BASEPATH,f"{DESTDIR}",dirs_exist_ok=True)
 
         # Generate things here that don't depend on our IP address.
         # Things that do depend on our IP address have to go in the next section.
